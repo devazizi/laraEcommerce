@@ -21,6 +21,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->timestamp('cell_number_verified_at')->nullable();
             $table->string('password');
+            $table->boolean('is_active')->default(false);
+            $table->boolean('is_banned_by_admin')->default(false);
             $table->timestamps();
         });
     }
